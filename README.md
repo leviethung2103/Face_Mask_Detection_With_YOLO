@@ -13,14 +13,14 @@ You can you any video resolution as an input.
 
 For more information details about Datasets as well as YOLO model, please contact the authors in reference. 
 
-## Requirements
+## 1. Requirements
 
 * python==3.6.9
 * opencv
 * imutils
 * hung-utils
 
-## How to install packages
+## 2. How to install packages
 Install my custom packages for reading video and export video
 
 ```
@@ -31,8 +31,23 @@ pip3 install -i https://test.pypi.org/simple/ hung-utils==0.5.7
 pip3 install -r requirements.txt
 ```
 
+Install GDOWN to download the pre-trained model
+```
+pip3 install gdown
+```
 
-## How to run 
+## 3. Download Pre-trained Model
+You need to create `data` folder and download pre-trained YOLO model. Move 2 files `yolo.names` and `yolov3_6000.weights` into `data` folder.
+```
+mkdir data
+gdown --id 10obD7emPjtp00b-pv2GuRw9EIpIPnvYW
+gdown --id 1yQgXZslsNJvcfDJcLj-rQm76HPdWSHcY
+mv yolo.names data
+mv yolov3_6000.weights data
+```
+
+
+## 4. How to run 
 
 On image: 
 
@@ -46,11 +61,11 @@ On video:
 python3 YOLO_video.py --video <video_folder>
 ```
 
-## Demo
+## 5. Demo
 
 https://www.youtube.com/watch?v=DS2xdOo69LU
 
-### References
+## 6. References
 
 [Article - MIAI - Face Mask Detection ](https://www.miai.vn/2020/04/27/nhan-dien-deo-khau-trang-face-mask-detection-bang-yolo/)
 
